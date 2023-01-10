@@ -1,0 +1,106 @@
+.game {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+dialog {
+  min-width: 400px;
+  min-height: 400px;
+  max-width: 600px;
+  padding: 25px;
+  border: none;
+  background: #fcc74c;
+  color: #280e44;
+  box-shadow: 3px 3px 0 0 #ef476f, 6px 6px 0 0 #9ba2ff, 9px 9px 0 0 #470ff4;
+}
+dialog .inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 400px;
+}
+dialog button {
+  position: relative;
+}
+dialog p,
+dialog span {
+  font-size: 1.25rem;
+  overflow-wrap: break-word;
+}
+dialog.ishighscore .highscore {
+  opacity: 1;
+  visibility: visible;
+}
+dialog h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ef476f;
+  margin: 1rem 0 2rem;
+}
+dialog .score {
+  position: relative;
+  display: block;
+  padding: 20px;
+  background: #fcbf33;
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+dialog .highscore {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  display: inline-block;
+  font-size: 1rem;
+  background-color: #470ff4;
+  color: white;
+  top: 85px;
+  right: 0;
+  padding: 5px 10px;
+  border-radius: 2px;
+}
+
+dialog::-webkit-backdrop {
+  background: rgba(40, 14, 68, 0.5);
+}
+
+dialog::backdrop {
+  background: rgba(40, 14, 68, 0.5);
+}
+
+.mute {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  color: #9ba2ff;
+  display: flex;
+  justify-content: flex-start;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+.mute i {
+  position: absolute;
+  opacity: 0;
+}
+.mute input:checked + i + i {
+  opacity: 1;
+}
+.mute input:not(:checked) + i {
+  opacity: 1;
+}
+.mute input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  -webkit-clip-path: rect(0, 0, 0, 0);
+  clip-path: rect(0, 0, 0, 0);
+}
+canvas {
+  width: 400px;
+  height: 400px;
+}
